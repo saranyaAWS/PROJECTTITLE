@@ -1,7 +1,9 @@
 pipeline {
     agent any
 
-    mvn 'Maven'
+   tools {
+  maven 'Maven'
+}
 
     stages{
         stage('github'){
