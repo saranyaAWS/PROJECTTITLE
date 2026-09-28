@@ -4,6 +4,11 @@ pipeline {
     maven 'Mvn'
 
     stages{
+        stage('github'){
+            steps{
+                git credentialsId: 'github_app', url: 'https://github.com/saranyaAWS/PROJECTTITLE.git'
+            }
+        }
         stage('build'){
             steps{
                sh 'mvn --version'
