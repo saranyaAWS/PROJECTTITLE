@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    maven 'M3'
+    mvn 'M3'
 
     stages{
         stage('github'){
@@ -38,7 +38,7 @@ pipeline {
         }
     }
     post{
-        sucess{
+        success{
             echo "java successfully run"
         }
         failure{
